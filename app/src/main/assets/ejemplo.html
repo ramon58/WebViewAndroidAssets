@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>WebViewAssets</title>
+
+<style type="text/css">
+<!--
+#Hello {
+	position:absolute;
+	width:301px;
+	height:70px;
+	z-index:1;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50px;
+	visibility: hidden;
+}
+.Estilo1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	color: #003366;
+}
+.Estilo2 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #003366;
+	font-size: 18px;
+}
+#ButtonV {
+	position:absolute;
+	width:200px;
+	height:100px;
+	z-index:2;
+	top: 170px;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	visibility: visible;
+}
+#ButtonB {
+	position:absolute;
+	width:200px;
+	height:100px;
+	z-index:3;
+	top: 170px;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	visibility: hidden;
+}
+#Bye {
+	position:absolute;
+	width:301px;
+	height:115px;
+	z-index:4;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50px;
+	visibility: hidden;
+}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+</head>
+<body>
+<div id="Hello">
+  <div align="center" class="Estilo1">Hello World! </div>
+  <br>
+  <div align="center" class="Estilo2">In an example stored in <br>webview assets</div>
+</div>
+
+
+<div id="ButtonV"><img src="images/boton_view.png" width="200" height="96" onClick="MM_showHideLayers('Hello','','show','ButtonV','','hide','ButtonB','','show','Bye','','hide')"></div>
+<div id="ButtonB"><img src="images/boton_bye.png" width="200" height="96" onClick="MM_showHideLayers('Hello','','hide','ButtonV','','show','ButtonB','','hide','Bye','','show')"></div>
+<div class="Estilo1" id="Bye">
+  <div align="center">Bye - Bye! </div>
+</div>
+</body>
+</html>
